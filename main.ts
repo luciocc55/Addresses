@@ -17,6 +17,6 @@ async function getAccounts(){
             address: element['delegator-address'], 
             amount:parseInt((parseFloat(element.amount) / (10 ** 18)).toString())
         }
-    }).filter((element)=> element.amount > 1000)
+    }).filter((element)=> element.amount >= 1000)
     return delegators
 }
